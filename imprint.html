@@ -7,32 +7,12 @@
   </head>
   <body>
     <header>
-      The Roman Conquest of Jerusalem (70 CE)
+      <a href="index.html">The Roman Conquest of Jerusalem (70 CE)</a>
     </header>
-    <main>
-     <div id="title">
-       <div>
-        <h1>The Roman Conquest of Jerusalem <br/>(70 CE) in Medieval Latin Texts <br/>between c.400 and c.1300:          
-        </h1>
-        <span>An Open-Access Database with c.2500 Entries <br/> 🚧 Currently under construction.🚧 </span>
-         <p>Alexander Marx
-          <br/>(Institute for Medieval Research, Austrin Academy of Sciences)
-        </p>
-      </div>
-      <figure>
-         <img src="assets/title-image.png" alt=""/>
-         <figcaption>Francesco Hayez, The Destruction of the Temple of Jerusalem (1857) (Gallerie Accademia Venice; photograph by Didier Descouens - <a href="https://commons.wikimedia.org/w/index.php?curid=132796743">Public Domain</a>)</figcaption>
-       </figure>
-     </div>
-     <div>
-      <div>
-        <p id="construction-notice">The database is under construction.<br/> Please check back later for updates. Estimated completion date: Nov-Dec 2026.</p>
-        [<a href="https://www.oeaw.ac.at/imafo/forschung/historische-identitaetsforschung/projekte/weitere-projekte/conquest-of-jerusalem/database-updates">Database Updates</a>]
-      </div>
-      <div id="contribute">
-        <p><span>Contribute to the database:</span> Send references to the Roman conquest to the PI via <a href="mailto:alexander.marx@oeaw.ac.at">e-mail</a>, including pertinent information and you will receive a note of acknowledgment in the database.</p>
-      </div>
-     </div>
+    <main>     
+        <h1 class="text-center">Imprint</h1>
+        <div id="imprint-content"></div>
+        
     </main>
     <footer>
       <div id="partners">
@@ -99,3 +79,16 @@
     </footer>
   </body>
 </html>
+<script>
+    const divImprint = document.querySelector("#imprint-content");
+    const url = "https://imprint.acdh.oeaw.ac.at/23082";
+    const getImprint = async() => {
+        const response = await fetch(url);
+        const data = await response.text();
+        console.log(data);
+        return data;
+    }
+   getImprint().then(data => {
+    divImprint.innerHTML = data;
+   })
+   </script>
