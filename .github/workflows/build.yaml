@@ -30,7 +30,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir dist
-          cp index.html dist/
+          cp *.html dist/
           cp style.css dist/
           cp -r assets dist/
 
