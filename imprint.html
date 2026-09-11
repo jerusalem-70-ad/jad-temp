@@ -10,8 +10,10 @@
       <a href="index.html">The Roman Conquest of Jerusalem (70 CE)</a>
     </header>
     <main>     
-        <h1 class="text-center">Imprint</h1>
-        <div id="imprint-content"></div>
+        
+          <h1 class="text-center">Imprint</h1>
+          <div id="imprint-content"></div>
+        
         
     </main>
     <footer>
@@ -73,7 +75,7 @@
       </div>
       <div id="imprint">
         <p>
-          <a href="imprint.html">imprint</a>
+          <a href="imprint.html">Imprint</a>
         </p>
       </div>
     </footer>
@@ -81,7 +83,7 @@
 </html>
 <script>
     const divImprint = document.querySelector("#imprint-content");
-    const url = "https://imprint.acdh.oeaw.ac.at/23082";
+    const url = "https://imprint.acdh.oeaw.ac.at/29116";
     const getImprint = async() => {
         const response = await fetch(url);
         const data = await response.text();

@@ -110,7 +110,8 @@ h2 {
 #imprint-content {
     display: block;
     text-align: justify;
-    color:#581908
+    color:#581908;
+    overflow: auto;
 }
 
 /* Right side */
@@ -151,6 +152,7 @@ main > div:last-child {
   padding: 2rem 3rem 3rem;
   box-sizing: border-box;
   text-align: center;
+  min-height: 0;
 }
 
 main > div:last-child > div {
